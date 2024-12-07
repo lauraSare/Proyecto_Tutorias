@@ -1,6 +1,96 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#f9f9f9"
+    android:padding="16dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Título -->
+        <TextView
+            android:id="@+id/tv_historial_titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Historial de Cambios en Alumnos"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="#333"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Tabla de datos -->
+        <TableLayout
+            android:id="@+id/tl_historial_cambios"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*"
+            android:background="#FFFFFF"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:elevation="4dp">
+
+            <!-- Encabezado -->
+            <TableRow
+                android:background="#28a745">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ID"
+                    android:textColor="#FFFFFF"
+                    android:padding="8dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Número de Control"
+                    android:textColor="#FFFFFF"
+                    android:padding="8dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Columna Modificada"
+                    android:textColor="#FFFFFF"
+                    android:padding="8dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Valor Anterior"
+                    android:textColor="#FFFFFF"
+                    android:padding="8dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Valor Nuevo"
+                    android:textColor="#FFFFFF"
+                    android:padding="8dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fecha"
+                    android:textColor="#FFFFFF"
+                    android:padding="8dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Usuario"
+                    android:textColor="#FFFFFF"
+                    android:padding="8dp" />
+            </TableRow>
+
+            <!-- Mensaje de no registros -->
+            <TextView
+                android:id="@+id/tv_no_registros"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No hay registros en el historial."
+                android:textSize="16sp"
+                android:gravity="center"
+                android:textColor="#333"
+                android:layout_marginTop="16dp"
+                android:visibility="gone" />
+        </TableLayout>
+    </LinearLayout>
+</ScrollView>

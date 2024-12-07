@@ -1,6 +1,145 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#f4f4f9">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Mensaje de Éxito -->
+        <TextView
+            android:id="@+id/tv_mensaje"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#228B22"
+            android:visibility="gone"
+            android:text="¡Datos modificados correctamente!"
+            android:padding="10dp"
+            android:gravity="center" />
+
+        <!-- Número de Control (Oculto) -->
+        <EditText
+            android:id="@+id/input_num_control"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Número de Control"
+            android:visibility="gone" />
+
+        <!-- Nombre -->
+        <EditText
+            android:id="@+id/input_nombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Primer Apellido -->
+        <EditText
+            android:id="@+id/input_apellido_p"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Primer Apellido"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Segundo Apellido -->
+        <EditText
+            android:id="@+id/input_apellido_m"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Segundo Apellido"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Fecha de Nacimiento -->
+        <EditText
+            android:id="@+id/input_fecha_nacimiento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Fecha de Nacimiento (YYYY-MM-DD)"
+            android:inputType="date"
+            android:padding="10dp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Teléfono -->
+        <EditText
+            android:id="@+id/input_telefono"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Teléfono (10 dígitos)"
+            android:inputType="phone"
+            android:padding="10dp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Correo Electrónico -->
+        <EditText
+            android:id="@+id/input_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Correo Electrónico"
+            android:inputType="textEmailAddress"
+            android:padding="10dp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Carrera -->
+        <Spinner
+            android:id="@+id/spinner_carrera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Botón de Modificar -->
+        <Button
+            android:id="@+id/btn_modificar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Modificar"
+            android:backgroundTint="#4CAF50"
+            android:textColor="#FFFFFF" />
+
+        <!-- Tabla de Alumnos -->
+        <TableLayout
+            android:id="@+id/tl_alumnos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:stretchColumns="*"
+            android:background="#FFFFFF">
+
+            <!-- Encabezados -->
+            <TableRow
+                android:background="#4CAF50"
+                android:padding="8dp">
+
+                <TextView
+                    android:text="Num Control"
+                    android:gravity="center"
+                    android:textColor="#FFFFFF"
+                    android:padding="8dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:text="Nombre"
+                    android:gravity="center"
+                    android:textColor="#FFFFFF"
+                    android:padding="8dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:text="Primer Apellido"
+                    android:gravity="center"
+                    android:textColor="#FFFFFF"
+                    android:padding="8dp"
+                    android:textStyle="bold" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+</ScrollView>

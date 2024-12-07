@@ -1,107 +1,113 @@
-<?xml version="1.0" encoding="utf-8"?>
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    android:background="#eafaf1">
+    android:background="#eafaf1"
+    android:padding="16dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!-- Número de Control -->
-        <EditText
-            android:id="@+id/inputNumControl"
+        <!-- Alertas -->
+        <TextView
+            android:id="@+id/alerta_exito"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Número de Control"
-            android:maxLength="9"
-            android:inputType="text"
+            android:background="#28a745"
             android:padding="10dp"
-            android:layout_marginBottom="16dp" />
+            android:text="Registro agregado correctamente"
+            android:textColor="#FFFFFF"
+            android:visibility="gone" />
 
-        <!-- Nombre -->
+        <TextView
+            android:id="@+id/alerta_error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FF0000"
+            android:padding="10dp"
+            android:text="Error al validar los datos"
+            android:textColor="#FFFFFF"
+            android:visibility="gone" />
+
+        <!-- Formulario -->
         <EditText
-            android:id="@+id/inputNombre"
+            android:id="@+id/input_num_control"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Número de Control (1 letra seguida de 8 números)"
+            android:inputType="text"
+            android:maxLength="9"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/input_nombre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Nombre"
-            android:maxLength="50"
             android:inputType="textPersonName"
-            android:padding="10dp"
-            android:layout_marginBottom="16dp" />
+            android:maxLength="50"
+            android:padding="10dp" />
 
-        <!-- Primer Apellido -->
         <EditText
-            android:id="@+id/inputPrimerApellido"
+            android:id="@+id/input_primer_apellido"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Primer Apellido"
-            android:maxLength="50"
             android:inputType="textPersonName"
-            android:padding="10dp"
-            android:layout_marginBottom="16dp" />
+            android:maxLength="50"
+            android:padding="10dp" />
 
-        <!-- Segundo Apellido -->
         <EditText
-            android:id="@+id/inputSegundoApellido"
+            android:id="@+id/input_segundo_apellido"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Segundo Apellido"
-            android:maxLength="50"
             android:inputType="textPersonName"
-            android:padding="10dp"
-            android:layout_marginBottom="16dp" />
+            android:maxLength="50"
+            android:padding="10dp" />
 
-        <!-- Fecha de Nacimiento -->
         <EditText
-            android:id="@+id/inputFechaNacimiento"
+            android:id="@+id/input_fecha_nacimiento"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Fecha de Nacimiento"
+            android:hint="Fecha de Nacimiento (YYYY-MM-DD)"
             android:inputType="date"
-            android:padding="10dp"
-            android:layout_marginBottom="16dp" />
+            android:padding="10dp" />
 
-        <!-- Teléfono -->
         <EditText
-            android:id="@+id/inputTelefono"
+            android:id="@+id/input_telefono"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Teléfono"
-            android:maxLength="10"
+            android:hint="Teléfono (10 dígitos)"
             android:inputType="phone"
-            android:padding="10dp"
-            android:layout_marginBottom="16dp" />
+            android:maxLength="10"
+            android:padding="10dp" />
 
-        <!-- Correo Electrónico -->
         <EditText
-            android:id="@+id/inputEmail"
+            android:id="@+id/input_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Correo Electrónico"
             android:inputType="textEmailAddress"
-            android:padding="10dp"
-            android:layout_marginBottom="16dp" />
+            android:maxLength="100"
+            android:padding="10dp" />
 
-        <!-- Carrera -->
         <Spinner
-            android:id="@+id/inputCarrera"
+            android:id="@+id/input_carrera"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp" />
+            android:spinnerMode="dropdown" />
 
-        <!-- Botón AGREGAR -->
         <Button
-            android:id="@+id/btnRegistrar"
+            android:id="@+id/btn_agregar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="#4CAF50"
-            android:textColor="#FFFFFF"
             android:text="AGREGAR"
-            android:padding="10dp" />
-
+            android:textColor="#FFFFFF"
+            android:padding="10dp"
+            android:layout_marginTop="16dp" />
     </LinearLayout>
 </ScrollView>

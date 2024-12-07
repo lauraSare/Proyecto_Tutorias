@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="resultadoTextView" type="id" />
+    <item name="successMessageTextView" type="id" />
+    <item name="resetPasswordButton" type="id" />
+    <item name="errorMessageTextView" type="id" />
+    <item name="historial_container" type="id" />
+</resources>

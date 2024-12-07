@@ -13,7 +13,7 @@
         android:theme="@style/Theme.Proyecto_Tutorias"
         tools:targetApi="31">
         <activity
-            android:name=".ActivityIndex"
+            android:name="com.example.ActivityMain"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
